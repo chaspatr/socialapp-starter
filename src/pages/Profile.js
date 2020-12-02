@@ -5,8 +5,6 @@ import UploadPhoto from "../components/uploadPhoto/UploadPhoto";
 import DataService from "./dataService";
 import AboutMe from "../components/About Me/AboutMe";
 
-
-
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -26,11 +24,13 @@ class Profile extends React.Component {
       <div className="Profile">
         <Menu isAuthenticated={this.props.isAuthenticated} />
         <center>
-          <b><h1>{this.state.user.username}</h1></b>
+          <b>
+            <h1>{this.state.user.username}</h1>
+          </b>
           <UploadPhoto />
           <br></br>
           <AboutMe />
-          <DeleteAcctButton />
+          {/* <DeleteAcctButton /> */}
         </center>
       </div>
     );
